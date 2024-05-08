@@ -81,13 +81,26 @@ public extension URL {
     /// Encode query parameters and add to current `URL`.
     /// - Parameters:
     ///    - queryParameters: Any instance conforms `Encodable` protocol.
-    ///    - encoder: instance of `QueryParametersEncoder` class.
+    ///    - encoder: instance of `RSNQueryParametersEncoder` class.
     ///        - Initialized by default.
     ///    - resolvingAgainstBaseURL: from `URLComponents(url:resolvingAgainstBaseURL:)` initializer.
     ///       - If resolvingAgainstBaseURL is `true` and url is a relative URL, the components of url.absoluteURL are used. If the url string from the URL is malformed, nil is returned.
     ///       - Default value: `true`
     /// - Throws: Any `Error` that occurs.
     mutating func addEncodableQueryParameters(_ queryParameters: Encodable, using encoder: RSNQueryParametersEncoder = .init(), resolvingAgainstBaseURL: Bool = true) throws {
+        let encodedQueryParameters = try encoder.encode(queryParameters)
+        try self.add(queryParameters: encodedQueryParameters, resolvingAgainstBaseURL: resolvingAgainstBaseURL)
+    }
+    /// Encode query parameters and add to current `URL`.
+    /// - Parameters:
+    ///    - queryParameters: Dictionary with `String` keys and `Any` values.
+    ///    - encoder: instance of `RSNQueryParametersEncoder` class.
+    ///        - Initialized by default.
+    ///    - resolvingAgainstBaseURL: from `URLComponents(url:resolvingAgainstBaseURL:)` initializer.
+    ///       - If resolvingAgainstBaseURL is `true` and url is a relative URL, the components of url.absoluteURL are used. If the url string from the URL is malformed, nil is returned.
+    ///       - Default value: `true`
+    /// - Throws: Any `Error` that occurs.
+    mutating func addEncodableQueryParameters(_ queryParameters: [String: Any], using encoder: RSNQueryParametersEncoder = .init(), resolvingAgainstBaseURL: Bool = true) throws {
         let encodedQueryParameters = try encoder.encode(queryParameters)
         try self.add(queryParameters: encodedQueryParameters, resolvingAgainstBaseURL: resolvingAgainstBaseURL)
     }
@@ -119,13 +132,26 @@ public extension URL {
     /// Encode query parameters and set query parameters to current `URL`. Previos query parameters will be deleted.
     /// - Parameters:
     ///    - queryParameters: Any instance conforms `Encodable` protocol.
-    ///    - encoder: instance of `QueryParametersEncoder` class.
+    ///    - encoder: instance of `RSNQueryParametersEncoder` class.
     ///         - Initialized by default.
     ///    - resolvingAgainstBaseURL: from `URLComponents(url:resolvingAgainstBaseURL:)` initializer.
     ///        - If resolvingAgainstBaseURL is `true` and url is a relative URL, the components of url.absoluteURL are used. If the url string from the URL is malformed, nil is returned.
     ///        - Default value: `true`
     /// - Throws: Any `Error` that occurs.
     mutating func setEncodableQueryParameters(_ queryParameters: Encodable, using encoder: RSNQueryParametersEncoder = .init(), resolvingAgainstBaseURL: Bool = true) throws {
+        let encodedQueryParameters = try encoder.encode(queryParameters)
+        try self.set(queryParameters: encodedQueryParameters, resolvingAgainstBaseURL: resolvingAgainstBaseURL)
+    }
+    /// Encode query parameters and set query parameters to current `URL`. Previos query parameters will be deleted.
+    /// - Parameters:
+    ///    - queryParameters: Dictionary with `String` keys and `Any` values.
+    ///    - encoder: instance of `RSNQueryParametersEncoder` class.
+    ///         - Initialized by default.
+    ///    - resolvingAgainstBaseURL: from `URLComponents(url:resolvingAgainstBaseURL:)` initializer.
+    ///        - If resolvingAgainstBaseURL is `true` and url is a relative URL, the components of url.absoluteURL are used. If the url string from the URL is malformed, nil is returned.
+    ///        - Default value: `true`
+    /// - Throws: Any `Error` that occurs.
+    mutating func setEncodableQueryParameters(_ queryParameters: [String: Any], using encoder: RSNQueryParametersEncoder = .init(), resolvingAgainstBaseURL: Bool = true) throws {
         let encodedQueryParameters = try encoder.encode(queryParameters)
         try self.set(queryParameters: encodedQueryParameters, resolvingAgainstBaseURL: resolvingAgainstBaseURL)
     }
