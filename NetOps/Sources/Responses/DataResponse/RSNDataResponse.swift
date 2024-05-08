@@ -21,7 +21,7 @@ public struct RSNDataResponse: RSNResponse {
         self.error = error
     }
     
-    public init(response: URLResponse?, data: Data? = nil, error: Error? = nil) {
+    public init(response: URLResponse? = nil, data: Data? = nil, error: Error? = nil) {
         let httpResponse = response as? HTTPURLResponse
         self.status = RSNResponseStatus(statusCode: httpResponse?.statusCode)
         self.headers = httpResponse?.allHeaderFields

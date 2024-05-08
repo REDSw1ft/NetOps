@@ -38,6 +38,11 @@
 		96B8A4262BEBB53B00C79968 /* RSNDataRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B8A4252BEBB53B00C79968 /* RSNDataRequest.swift */; };
 		96B8A42A2BEBBC2100C79968 /* RSNDataResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B8A4292BEBBC2100C79968 /* RSNDataResponse.swift */; };
 		96B8A42D2BEBBDCB00C79968 /* RSNDownloadResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B8A42C2BEBBDCB00C79968 /* RSNDownloadResponse.swift */; };
+		96B8A4302BEBBF4700C79968 /* URLSession+DataTasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B8A42F2BEBBF4700C79968 /* URLSession+DataTasks.swift */; };
+		96B8A4322BEBC1A500C79968 /* URLSession+DownloadTasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B8A4312BEBC1A500C79968 /* URLSession+DownloadTasks.swift */; };
+		96B8A4342BEBC24B00C79968 /* URLSession+UploadTasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B8A4332BEBC24B00C79968 /* URLSession+UploadTasks.swift */; };
+		96B8A4362BEBC3BC00C79968 /* URLSession+Sending.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B8A4352BEBC3BC00C79968 /* URLSession+Sending.swift */; };
+		96D182532BEBCD3E00DC17BE /* URLSession+Concurrency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D182522BEBCD3E00DC17BE /* URLSession+Concurrency.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +88,11 @@
 		96B8A4252BEBB53B00C79968 /* RSNDataRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSNDataRequest.swift; sourceTree = "<group>"; };
 		96B8A4292BEBBC2100C79968 /* RSNDataResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSNDataResponse.swift; sourceTree = "<group>"; };
 		96B8A42C2BEBBDCB00C79968 /* RSNDownloadResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSNDownloadResponse.swift; sourceTree = "<group>"; };
+		96B8A42F2BEBBF4700C79968 /* URLSession+DataTasks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSession+DataTasks.swift"; sourceTree = "<group>"; };
+		96B8A4312BEBC1A500C79968 /* URLSession+DownloadTasks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSession+DownloadTasks.swift"; sourceTree = "<group>"; };
+		96B8A4332BEBC24B00C79968 /* URLSession+UploadTasks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSession+UploadTasks.swift"; sourceTree = "<group>"; };
+		96B8A4352BEBC3BC00C79968 /* URLSession+Sending.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSession+Sending.swift"; sourceTree = "<group>"; };
+		96D182522BEBCD3E00DC17BE /* URLSession+Concurrency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSession+Concurrency.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -199,6 +209,7 @@
 				96B8A4122BEBABB700C79968 /* NSNumber */,
 				96B8A4052BEBA7E000C79968 /* URL */,
 				96B2F3E42BEBA17F00BCB0F3 /* URLRequest */,
+				96B8A42E2BEBBF3300C79968 /* URLSession */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -343,6 +354,18 @@
 			path = DownloadResponse;
 			sourceTree = "<group>";
 		};
+		96B8A42E2BEBBF3300C79968 /* URLSession */ = {
+			isa = PBXGroup;
+			children = (
+				96D182522BEBCD3E00DC17BE /* URLSession+Concurrency.swift */,
+				96B8A42F2BEBBF4700C79968 /* URLSession+DataTasks.swift */,
+				96B8A4312BEBC1A500C79968 /* URLSession+DownloadTasks.swift */,
+				96B8A4352BEBC3BC00C79968 /* URLSession+Sending.swift */,
+				96B8A4332BEBC24B00C79968 /* URLSession+UploadTasks.swift */,
+			);
+			path = URLSession;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -458,6 +481,7 @@
 				96B8A3F82BEBA3B100C79968 /* RSNResponseInformationalStatus.swift in Sources */,
 				96B8A3FC2BEBA43200C79968 /* RSNResponseRedirectionStatus.swift in Sources */,
 				96B8A3FA2BEBA3E500C79968 /* RSNResponseSuccessfulStatus.swift in Sources */,
+				96D182532BEBCD3E00DC17BE /* URLSession+Concurrency.swift in Sources */,
 				96B8A42A2BEBBC2100C79968 /* RSNDataResponse.swift in Sources */,
 				96B2F3DE2BEBA0A200BCB0F3 /* RSNRequestMethod.swift in Sources */,
 				96B8A4112BEBAAA500C79968 /* Encodable+ConvertToDictionary.swift in Sources */,
@@ -466,6 +490,7 @@
 				96B2F3E62BEBA19900BCB0F3 /* URLRequest+InitFromRSNRequest.swift in Sources */,
 				96B8A40E2BEBAA6700C79968 /* RSNQueryParametersEncoder.swift in Sources */,
 				96B8A4002BEBA4AC00C79968 /* RSNResponseServerError.swift in Sources */,
+				96B8A4342BEBC24B00C79968 /* URLSession+UploadTasks.swift in Sources */,
 				96B8A4162BEBAC2500C79968 /* RSNQueryParametersEncoder+ArrayEncodingStrategy.swift in Sources */,
 				96B8A4072BEBA7F100C79968 /* URL+QueryParameters.swift in Sources */,
 				965455DE2BEB97BD00B871C3 /* NetOps.docc in Sources */,
@@ -474,12 +499,15 @@
 				96B2F3E92BEBA28200BCB0F3 /* RSNResponse.swift in Sources */,
 				96B8A4262BEBB53B00C79968 /* RSNDataRequest.swift in Sources */,
 				96B8A4182BEBAC7600C79968 /* RSNQueryParametersEncoder+BooleanEncodingStrategy.swift in Sources */,
+				96B8A4302BEBBF4700C79968 /* URLSession+DataTasks.swift in Sources */,
 				96B8A4142BEBABC800C79968 /* NSNumber+IsBool.swift in Sources */,
 				96B8A4222BEBB22900C79968 /* Data+AppendString.swift in Sources */,
 				96B8A42D2BEBBDCB00C79968 /* RSNDownloadResponse.swift in Sources */,
 				96B2F3E22BEBA11A00BCB0F3 /* RSNRequest.swift in Sources */,
+				96B8A4322BEBC1A500C79968 /* URLSession+DownloadTasks.swift in Sources */,
 				96B8A40A2BEBA82500C79968 /* RSNURLError.swift in Sources */,
 				96B8A4042BEBA5D700C79968 /* RSNResponseStatus+Equatable.swift in Sources */,
+				96B8A4362BEBC3BC00C79968 /* URLSession+Sending.swift in Sources */,
 				96B8A4022BEBA54E00C79968 /* RSNResponseStatus+CaseIterable.swift in Sources */,
 				96B8A3FE2BEBA46500C79968 /* RSNResponseClientError.swift in Sources */,
 			);
