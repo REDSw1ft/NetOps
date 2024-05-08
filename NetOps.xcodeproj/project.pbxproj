@@ -11,6 +11,9 @@
 		965455E42BEB97BD00B871C3 /* NetOps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 965455D92BEB97BD00B871C3 /* NetOps.framework */; };
 		965455E92BEB97BD00B871C3 /* NetOpsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965455E82BEB97BD00B871C3 /* NetOpsTests.swift */; };
 		965455EA2BEB97BD00B871C3 /* NetOps.h in Headers */ = {isa = PBXBuildFile; fileRef = 965455DC2BEB97BD00B871C3 /* NetOps.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		96B2F3DE2BEBA0A200BCB0F3 /* RSNRequestMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B2F3DD2BEBA0A200BCB0F3 /* RSNRequestMethod.swift */; };
+		96B2F3E02BEBA0D900BCB0F3 /* RSNRequestMethod+CustomStringConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B2F3DF2BEBA0D900BCB0F3 /* RSNRequestMethod+CustomStringConvertible.swift */; };
+		96B2F3E22BEBA11A00BCB0F3 /* RSNRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B2F3E12BEBA11A00BCB0F3 /* RSNRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +32,9 @@
 		965455DD2BEB97BD00B871C3 /* NetOps.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = NetOps.docc; sourceTree = "<group>"; };
 		965455E32BEB97BD00B871C3 /* NetOpsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NetOpsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		965455E82BEB97BD00B871C3 /* NetOpsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetOpsTests.swift; sourceTree = "<group>"; };
+		96B2F3DD2BEBA0A200BCB0F3 /* RSNRequestMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSNRequestMethod.swift; sourceTree = "<group>"; };
+		96B2F3DF2BEBA0D900BCB0F3 /* RSNRequestMethod+CustomStringConvertible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RSNRequestMethod+CustomStringConvertible.swift"; sourceTree = "<group>"; };
+		96B2F3E12BEBA11A00BCB0F3 /* RSNRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSNRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,8 +96,43 @@
 		96B2F3CA2BEB9B4000BCB0F3 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				96B2F3DA2BEBA07A00BCB0F3 /* Enums */,
+				96B2F3D92BEBA06F00BCB0F3 /* Protocols */,
 			);
 			path = Sources;
+			sourceTree = "<group>";
+		};
+		96B2F3D92BEBA06F00BCB0F3 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				96B2F3DB2BEBA08600BCB0F3 /* Request */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		96B2F3DA2BEBA07A00BCB0F3 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				96B2F3DC2BEBA08C00BCB0F3 /* RequestMethod */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
+		96B2F3DB2BEBA08600BCB0F3 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				96B2F3E12BEBA11A00BCB0F3 /* RSNRequest.swift */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		96B2F3DC2BEBA08C00BCB0F3 /* RequestMethod */ = {
+			isa = PBXGroup;
+			children = (
+				96B2F3DD2BEBA0A200BCB0F3 /* RSNRequestMethod.swift */,
+				96B2F3DF2BEBA0D900BCB0F3 /* RSNRequestMethod+CustomStringConvertible.swift */,
+			);
+			path = RequestMethod;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -205,7 +246,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96B2F3DE2BEBA0A200BCB0F3 /* RSNRequestMethod.swift in Sources */,
 				965455DE2BEB97BD00B871C3 /* NetOps.docc in Sources */,
+				96B2F3E02BEBA0D900BCB0F3 /* RSNRequestMethod+CustomStringConvertible.swift in Sources */,
+				96B2F3E22BEBA11A00BCB0F3 /* RSNRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -435,6 +479,7 @@
 		965455F12BEB97BD00B871C3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -454,6 +499,7 @@
 		965455F22BEB97BD00B871C3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
