@@ -15,6 +15,15 @@
 		96B2F3E02BEBA0D900BCB0F3 /* RSNRequestMethod+CustomStringConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B2F3DF2BEBA0D900BCB0F3 /* RSNRequestMethod+CustomStringConvertible.swift */; };
 		96B2F3E22BEBA11A00BCB0F3 /* RSNRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B2F3E12BEBA11A00BCB0F3 /* RSNRequest.swift */; };
 		96B2F3E62BEBA19900BCB0F3 /* URLRequest+InitFromRSNRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B2F3E52BEBA19900BCB0F3 /* URLRequest+InitFromRSNRequest.swift */; };
+		96B2F3E92BEBA28200BCB0F3 /* RSNResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B2F3E82BEBA28200BCB0F3 /* RSNResponse.swift */; };
+		96B2F3EC2BEBA31B00BCB0F3 /* RSNResponseStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B2F3EB2BEBA31B00BCB0F3 /* RSNResponseStatus.swift */; };
+		96B8A3F82BEBA3B100C79968 /* RSNResponseInformationalStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B8A3F72BEBA3B100C79968 /* RSNResponseInformationalStatus.swift */; };
+		96B8A3FA2BEBA3E500C79968 /* RSNResponseSuccessfulStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B8A3F92BEBA3E500C79968 /* RSNResponseSuccessfulStatus.swift */; };
+		96B8A3FC2BEBA43200C79968 /* RSNResponseRedirectionStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B8A3FB2BEBA43200C79968 /* RSNResponseRedirectionStatus.swift */; };
+		96B8A3FE2BEBA46500C79968 /* RSNResponseClientError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B8A3FD2BEBA46500C79968 /* RSNResponseClientError.swift */; };
+		96B8A4002BEBA4AC00C79968 /* RSNResponseServerError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B8A3FF2BEBA4AC00C79968 /* RSNResponseServerError.swift */; };
+		96B8A4022BEBA54E00C79968 /* RSNResponseStatus+CaseIterable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B8A4012BEBA54E00C79968 /* RSNResponseStatus+CaseIterable.swift */; };
+		96B8A4042BEBA5D700C79968 /* RSNResponseStatus+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B8A4032BEBA5D700C79968 /* RSNResponseStatus+Equatable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +46,15 @@
 		96B2F3DF2BEBA0D900BCB0F3 /* RSNRequestMethod+CustomStringConvertible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RSNRequestMethod+CustomStringConvertible.swift"; sourceTree = "<group>"; };
 		96B2F3E12BEBA11A00BCB0F3 /* RSNRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSNRequest.swift; sourceTree = "<group>"; };
 		96B2F3E52BEBA19900BCB0F3 /* URLRequest+InitFromRSNRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLRequest+InitFromRSNRequest.swift"; sourceTree = "<group>"; };
+		96B2F3E82BEBA28200BCB0F3 /* RSNResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSNResponse.swift; sourceTree = "<group>"; };
+		96B2F3EB2BEBA31B00BCB0F3 /* RSNResponseStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSNResponseStatus.swift; sourceTree = "<group>"; };
+		96B8A3F72BEBA3B100C79968 /* RSNResponseInformationalStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSNResponseInformationalStatus.swift; sourceTree = "<group>"; };
+		96B8A3F92BEBA3E500C79968 /* RSNResponseSuccessfulStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSNResponseSuccessfulStatus.swift; sourceTree = "<group>"; };
+		96B8A3FB2BEBA43200C79968 /* RSNResponseRedirectionStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSNResponseRedirectionStatus.swift; sourceTree = "<group>"; };
+		96B8A3FD2BEBA46500C79968 /* RSNResponseClientError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSNResponseClientError.swift; sourceTree = "<group>"; };
+		96B8A3FF2BEBA4AC00C79968 /* RSNResponseServerError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSNResponseServerError.swift; sourceTree = "<group>"; };
+		96B8A4012BEBA54E00C79968 /* RSNResponseStatus+CaseIterable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RSNResponseStatus+CaseIterable.swift"; sourceTree = "<group>"; };
+		96B8A4032BEBA5D700C79968 /* RSNResponseStatus+Equatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RSNResponseStatus+Equatable.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				96B2F3DB2BEBA08600BCB0F3 /* Request */,
+				96B2F3E72BEBA26A00BCB0F3 /* Response */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -116,6 +135,7 @@
 		96B2F3DA2BEBA07A00BCB0F3 /* Enums */ = {
 			isa = PBXGroup;
 			children = (
+				96B2F3EA2BEBA2E700BCB0F3 /* ResponseStatus */,
 				96B2F3DC2BEBA08C00BCB0F3 /* RequestMethod */,
 			);
 			path = Enums;
@@ -152,6 +172,29 @@
 				96B2F3E52BEBA19900BCB0F3 /* URLRequest+InitFromRSNRequest.swift */,
 			);
 			path = URLRequest;
+			sourceTree = "<group>";
+		};
+		96B2F3E72BEBA26A00BCB0F3 /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				96B2F3E82BEBA28200BCB0F3 /* RSNResponse.swift */,
+			);
+			path = Response;
+			sourceTree = "<group>";
+		};
+		96B2F3EA2BEBA2E700BCB0F3 /* ResponseStatus */ = {
+			isa = PBXGroup;
+			children = (
+				96B2F3EB2BEBA31B00BCB0F3 /* RSNResponseStatus.swift */,
+				96B8A4012BEBA54E00C79968 /* RSNResponseStatus+CaseIterable.swift */,
+				96B8A4032BEBA5D700C79968 /* RSNResponseStatus+Equatable.swift */,
+				96B8A3F72BEBA3B100C79968 /* RSNResponseInformationalStatus.swift */,
+				96B8A3F92BEBA3E500C79968 /* RSNResponseSuccessfulStatus.swift */,
+				96B8A3FB2BEBA43200C79968 /* RSNResponseRedirectionStatus.swift */,
+				96B8A3FD2BEBA46500C79968 /* RSNResponseClientError.swift */,
+				96B8A3FF2BEBA4AC00C79968 /* RSNResponseServerError.swift */,
+			);
+			path = ResponseStatus;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -265,11 +308,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96B8A3F82BEBA3B100C79968 /* RSNResponseInformationalStatus.swift in Sources */,
+				96B8A3FC2BEBA43200C79968 /* RSNResponseRedirectionStatus.swift in Sources */,
+				96B8A3FA2BEBA3E500C79968 /* RSNResponseSuccessfulStatus.swift in Sources */,
 				96B2F3DE2BEBA0A200BCB0F3 /* RSNRequestMethod.swift in Sources */,
+				96B2F3EC2BEBA31B00BCB0F3 /* RSNResponseStatus.swift in Sources */,
 				96B2F3E62BEBA19900BCB0F3 /* URLRequest+InitFromRSNRequest.swift in Sources */,
+				96B8A4002BEBA4AC00C79968 /* RSNResponseServerError.swift in Sources */,
 				965455DE2BEB97BD00B871C3 /* NetOps.docc in Sources */,
 				96B2F3E02BEBA0D900BCB0F3 /* RSNRequestMethod+CustomStringConvertible.swift in Sources */,
+				96B2F3E92BEBA28200BCB0F3 /* RSNResponse.swift in Sources */,
 				96B2F3E22BEBA11A00BCB0F3 /* RSNRequest.swift in Sources */,
+				96B8A4042BEBA5D700C79968 /* RSNResponseStatus+Equatable.swift in Sources */,
+				96B8A4022BEBA54E00C79968 /* RSNResponseStatus+CaseIterable.swift in Sources */,
+				96B8A3FE2BEBA46500C79968 /* RSNResponseClientError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
