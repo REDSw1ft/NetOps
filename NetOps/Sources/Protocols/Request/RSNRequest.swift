@@ -1,5 +1,6 @@
 import Foundation
 
+public typealias RSNRequestQueryParameter = URLQueryItem
 public typealias RSNRequestHeaders = [String: String]
 public typealias RSNRequestBody = Data
 
