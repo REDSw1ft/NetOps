@@ -26,6 +26,11 @@
 		96B8A4042BEBA5D700C79968 /* RSNResponseStatus+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B8A4032BEBA5D700C79968 /* RSNResponseStatus+Equatable.swift */; };
 		96B8A4072BEBA7F100C79968 /* URL+QueryParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B8A4062BEBA7F100C79968 /* URL+QueryParameters.swift */; };
 		96B8A40A2BEBA82500C79968 /* RSNURLError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B8A4092BEBA82500C79968 /* RSNURLError.swift */; };
+		96B8A40E2BEBAA6700C79968 /* RSNQueryParametersEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B8A40D2BEBAA6700C79968 /* RSNQueryParametersEncoder.swift */; };
+		96B8A4112BEBAAA500C79968 /* Encodable+ConvertToDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B8A4102BEBAAA500C79968 /* Encodable+ConvertToDictionary.swift */; };
+		96B8A4142BEBABC800C79968 /* NSNumber+IsBool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B8A4132BEBABC800C79968 /* NSNumber+IsBool.swift */; };
+		96B8A4162BEBAC2500C79968 /* RSNQueryParametersEncoder+ArrayEncodingStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B8A4152BEBAC2500C79968 /* RSNQueryParametersEncoder+ArrayEncodingStrategy.swift */; };
+		96B8A4182BEBAC7600C79968 /* RSNQueryParametersEncoder+BooleanEncodingStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B8A4172BEBAC7600C79968 /* RSNQueryParametersEncoder+BooleanEncodingStrategy.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +64,11 @@
 		96B8A4032BEBA5D700C79968 /* RSNResponseStatus+Equatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RSNResponseStatus+Equatable.swift"; sourceTree = "<group>"; };
 		96B8A4062BEBA7F100C79968 /* URL+QueryParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+QueryParameters.swift"; sourceTree = "<group>"; };
 		96B8A4092BEBA82500C79968 /* RSNURLError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSNURLError.swift; sourceTree = "<group>"; };
+		96B8A40D2BEBAA6700C79968 /* RSNQueryParametersEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSNQueryParametersEncoder.swift; sourceTree = "<group>"; };
+		96B8A4102BEBAAA500C79968 /* Encodable+ConvertToDictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Encodable+ConvertToDictionary.swift"; sourceTree = "<group>"; };
+		96B8A4132BEBABC800C79968 /* NSNumber+IsBool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSNumber+IsBool.swift"; sourceTree = "<group>"; };
+		96B8A4152BEBAC2500C79968 /* RSNQueryParametersEncoder+ArrayEncodingStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RSNQueryParametersEncoder+ArrayEncodingStrategy.swift"; sourceTree = "<group>"; };
+		96B8A4172BEBAC7600C79968 /* RSNQueryParametersEncoder+BooleanEncodingStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RSNQueryParametersEncoder+BooleanEncodingStrategy.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,9 +130,10 @@
 		96B2F3CA2BEB9B4000BCB0F3 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				96B8A40B2BEBAA2900C79968 /* Encoders */,
+				96B2F3DA2BEBA07A00BCB0F3 /* Enums */,
 				96B8A4082BEBA80200C79968 /* Errors */,
 				96B2F3E32BEBA17500BCB0F3 /* Extensions */,
-				96B2F3DA2BEBA07A00BCB0F3 /* Enums */,
 				96B2F3D92BEBA06F00BCB0F3 /* Protocols */,
 			);
 			path = Sources;
@@ -166,6 +177,8 @@
 		96B2F3E32BEBA17500BCB0F3 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				96B8A40F2BEBAA9000C79968 /* Encodable */,
+				96B8A4122BEBABB700C79968 /* NSNumber */,
 				96B8A4052BEBA7E000C79968 /* URL */,
 				96B2F3E42BEBA17F00BCB0F3 /* URLRequest */,
 			);
@@ -217,6 +230,40 @@
 				96B8A4092BEBA82500C79968 /* RSNURLError.swift */,
 			);
 			path = Errors;
+			sourceTree = "<group>";
+		};
+		96B8A40B2BEBAA2900C79968 /* Encoders */ = {
+			isa = PBXGroup;
+			children = (
+				96B8A40C2BEBAA3900C79968 /* QueryParametersEncoder */,
+			);
+			path = Encoders;
+			sourceTree = "<group>";
+		};
+		96B8A40C2BEBAA3900C79968 /* QueryParametersEncoder */ = {
+			isa = PBXGroup;
+			children = (
+				96B8A40D2BEBAA6700C79968 /* RSNQueryParametersEncoder.swift */,
+				96B8A4152BEBAC2500C79968 /* RSNQueryParametersEncoder+ArrayEncodingStrategy.swift */,
+				96B8A4172BEBAC7600C79968 /* RSNQueryParametersEncoder+BooleanEncodingStrategy.swift */,
+			);
+			path = QueryParametersEncoder;
+			sourceTree = "<group>";
+		};
+		96B8A40F2BEBAA9000C79968 /* Encodable */ = {
+			isa = PBXGroup;
+			children = (
+				96B8A4102BEBAAA500C79968 /* Encodable+ConvertToDictionary.swift */,
+			);
+			path = Encodable;
+			sourceTree = "<group>";
+		};
+		96B8A4122BEBABB700C79968 /* NSNumber */ = {
+			isa = PBXGroup;
+			children = (
+				96B8A4132BEBABC800C79968 /* NSNumber+IsBool.swift */,
+			);
+			path = NSNumber;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -334,13 +381,18 @@
 				96B8A3FC2BEBA43200C79968 /* RSNResponseRedirectionStatus.swift in Sources */,
 				96B8A3FA2BEBA3E500C79968 /* RSNResponseSuccessfulStatus.swift in Sources */,
 				96B2F3DE2BEBA0A200BCB0F3 /* RSNRequestMethod.swift in Sources */,
+				96B8A4112BEBAAA500C79968 /* Encodable+ConvertToDictionary.swift in Sources */,
 				96B2F3EC2BEBA31B00BCB0F3 /* RSNResponseStatus.swift in Sources */,
 				96B2F3E62BEBA19900BCB0F3 /* URLRequest+InitFromRSNRequest.swift in Sources */,
+				96B8A40E2BEBAA6700C79968 /* RSNQueryParametersEncoder.swift in Sources */,
 				96B8A4002BEBA4AC00C79968 /* RSNResponseServerError.swift in Sources */,
+				96B8A4162BEBAC2500C79968 /* RSNQueryParametersEncoder+ArrayEncodingStrategy.swift in Sources */,
 				96B8A4072BEBA7F100C79968 /* URL+QueryParameters.swift in Sources */,
 				965455DE2BEB97BD00B871C3 /* NetOps.docc in Sources */,
 				96B2F3E02BEBA0D900BCB0F3 /* RSNRequestMethod+CustomStringConvertible.swift in Sources */,
 				96B2F3E92BEBA28200BCB0F3 /* RSNResponse.swift in Sources */,
+				96B8A4182BEBAC7600C79968 /* RSNQueryParametersEncoder+BooleanEncodingStrategy.swift in Sources */,
+				96B8A4142BEBABC800C79968 /* NSNumber+IsBool.swift in Sources */,
 				96B2F3E22BEBA11A00BCB0F3 /* RSNRequest.swift in Sources */,
 				96B8A40A2BEBA82500C79968 /* RSNURLError.swift in Sources */,
 				96B8A4042BEBA5D700C79968 /* RSNResponseStatus+Equatable.swift in Sources */,
