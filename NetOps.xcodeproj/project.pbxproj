@@ -36,6 +36,8 @@
 		96B8A41F2BEBB1D500C79968 /* RSNMultipartDataError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B8A41E2BEBB1D500C79968 /* RSNMultipartDataError.swift */; };
 		96B8A4222BEBB22900C79968 /* Data+AppendString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B8A4212BEBB22900C79968 /* Data+AppendString.swift */; };
 		96B8A4262BEBB53B00C79968 /* RSNDataRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B8A4252BEBB53B00C79968 /* RSNDataRequest.swift */; };
+		96B8A42A2BEBBC2100C79968 /* RSNDataResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B8A4292BEBBC2100C79968 /* RSNDataResponse.swift */; };
+		96B8A42D2BEBBDCB00C79968 /* RSNDownloadResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B8A42C2BEBBDCB00C79968 /* RSNDownloadResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +81,8 @@
 		96B8A41E2BEBB1D500C79968 /* RSNMultipartDataError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSNMultipartDataError.swift; sourceTree = "<group>"; };
 		96B8A4212BEBB22900C79968 /* Data+AppendString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+AppendString.swift"; sourceTree = "<group>"; };
 		96B8A4252BEBB53B00C79968 /* RSNDataRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSNDataRequest.swift; sourceTree = "<group>"; };
+		96B8A4292BEBBC2100C79968 /* RSNDataResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSNDataResponse.swift; sourceTree = "<group>"; };
+		96B8A42C2BEBBDCB00C79968 /* RSNDownloadResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSNDownloadResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,13 +144,14 @@
 		96B2F3CA2BEB9B4000BCB0F3 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				96B8A4232BEBB51300C79968 /* Requests */,
 				96B8A40B2BEBAA2900C79968 /* Encoders */,
 				96B2F3DA2BEBA07A00BCB0F3 /* Enums */,
 				96B8A4082BEBA80200C79968 /* Errors */,
 				96B2F3E32BEBA17500BCB0F3 /* Extensions */,
 				96B8A4192BEBB12700C79968 /* MultipartFormData */,
 				96B2F3D92BEBA06F00BCB0F3 /* Protocols */,
+				96B8A4232BEBB51300C79968 /* Requests */,
+				96B8A4272BEBBBE100C79968 /* Responses */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -313,6 +318,31 @@
 			path = DataRequest;
 			sourceTree = "<group>";
 		};
+		96B8A4272BEBBBE100C79968 /* Responses */ = {
+			isa = PBXGroup;
+			children = (
+				96B8A4282BEBBC0400C79968 /* DataResponse */,
+				96B8A42B2BEBBDB400C79968 /* DownloadResponse */,
+			);
+			path = Responses;
+			sourceTree = "<group>";
+		};
+		96B8A4282BEBBC0400C79968 /* DataResponse */ = {
+			isa = PBXGroup;
+			children = (
+				96B8A4292BEBBC2100C79968 /* RSNDataResponse.swift */,
+			);
+			path = DataResponse;
+			sourceTree = "<group>";
+		};
+		96B8A42B2BEBBDB400C79968 /* DownloadResponse */ = {
+			isa = PBXGroup;
+			children = (
+				96B8A42C2BEBBDCB00C79968 /* RSNDownloadResponse.swift */,
+			);
+			path = DownloadResponse;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -428,6 +458,7 @@
 				96B8A3F82BEBA3B100C79968 /* RSNResponseInformationalStatus.swift in Sources */,
 				96B8A3FC2BEBA43200C79968 /* RSNResponseRedirectionStatus.swift in Sources */,
 				96B8A3FA2BEBA3E500C79968 /* RSNResponseSuccessfulStatus.swift in Sources */,
+				96B8A42A2BEBBC2100C79968 /* RSNDataResponse.swift in Sources */,
 				96B2F3DE2BEBA0A200BCB0F3 /* RSNRequestMethod.swift in Sources */,
 				96B8A4112BEBAAA500C79968 /* Encodable+ConvertToDictionary.swift in Sources */,
 				96B2F3EC2BEBA31B00BCB0F3 /* RSNResponseStatus.swift in Sources */,
@@ -445,6 +476,7 @@
 				96B8A4182BEBAC7600C79968 /* RSNQueryParametersEncoder+BooleanEncodingStrategy.swift in Sources */,
 				96B8A4142BEBABC800C79968 /* NSNumber+IsBool.swift in Sources */,
 				96B8A4222BEBB22900C79968 /* Data+AppendString.swift in Sources */,
+				96B8A42D2BEBBDCB00C79968 /* RSNDownloadResponse.swift in Sources */,
 				96B2F3E22BEBA11A00BCB0F3 /* RSNRequest.swift in Sources */,
 				96B8A40A2BEBA82500C79968 /* RSNURLError.swift in Sources */,
 				96B8A4042BEBA5D700C79968 /* RSNResponseStatus+Equatable.swift in Sources */,
