@@ -14,6 +14,7 @@
 		96B2F3DE2BEBA0A200BCB0F3 /* RSNRequestMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B2F3DD2BEBA0A200BCB0F3 /* RSNRequestMethod.swift */; };
 		96B2F3E02BEBA0D900BCB0F3 /* RSNRequestMethod+CustomStringConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B2F3DF2BEBA0D900BCB0F3 /* RSNRequestMethod+CustomStringConvertible.swift */; };
 		96B2F3E22BEBA11A00BCB0F3 /* RSNRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B2F3E12BEBA11A00BCB0F3 /* RSNRequest.swift */; };
+		96B2F3E62BEBA19900BCB0F3 /* URLRequest+InitFromRSNRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B2F3E52BEBA19900BCB0F3 /* URLRequest+InitFromRSNRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +36,7 @@
 		96B2F3DD2BEBA0A200BCB0F3 /* RSNRequestMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSNRequestMethod.swift; sourceTree = "<group>"; };
 		96B2F3DF2BEBA0D900BCB0F3 /* RSNRequestMethod+CustomStringConvertible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RSNRequestMethod+CustomStringConvertible.swift"; sourceTree = "<group>"; };
 		96B2F3E12BEBA11A00BCB0F3 /* RSNRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSNRequest.swift; sourceTree = "<group>"; };
+		96B2F3E52BEBA19900BCB0F3 /* URLRequest+InitFromRSNRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLRequest+InitFromRSNRequest.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 		96B2F3CA2BEB9B4000BCB0F3 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				96B2F3E32BEBA17500BCB0F3 /* Extensions */,
 				96B2F3DA2BEBA07A00BCB0F3 /* Enums */,
 				96B2F3D92BEBA06F00BCB0F3 /* Protocols */,
 			);
@@ -133,6 +136,22 @@
 				96B2F3DF2BEBA0D900BCB0F3 /* RSNRequestMethod+CustomStringConvertible.swift */,
 			);
 			path = RequestMethod;
+			sourceTree = "<group>";
+		};
+		96B2F3E32BEBA17500BCB0F3 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				96B2F3E42BEBA17F00BCB0F3 /* URLRequest */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		96B2F3E42BEBA17F00BCB0F3 /* URLRequest */ = {
+			isa = PBXGroup;
+			children = (
+				96B2F3E52BEBA19900BCB0F3 /* URLRequest+InitFromRSNRequest.swift */,
+			);
+			path = URLRequest;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -247,6 +266,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				96B2F3DE2BEBA0A200BCB0F3 /* RSNRequestMethod.swift in Sources */,
+				96B2F3E62BEBA19900BCB0F3 /* URLRequest+InitFromRSNRequest.swift in Sources */,
 				965455DE2BEB97BD00B871C3 /* NetOps.docc in Sources */,
 				96B2F3E02BEBA0D900BCB0F3 /* RSNRequestMethod+CustomStringConvertible.swift in Sources */,
 				96B2F3E22BEBA11A00BCB0F3 /* RSNRequest.swift in Sources */,
