@@ -31,6 +31,10 @@
 		96B8A4142BEBABC800C79968 /* NSNumber+IsBool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B8A4132BEBABC800C79968 /* NSNumber+IsBool.swift */; };
 		96B8A4162BEBAC2500C79968 /* RSNQueryParametersEncoder+ArrayEncodingStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B8A4152BEBAC2500C79968 /* RSNQueryParametersEncoder+ArrayEncodingStrategy.swift */; };
 		96B8A4182BEBAC7600C79968 /* RSNQueryParametersEncoder+BooleanEncodingStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B8A4172BEBAC7600C79968 /* RSNQueryParametersEncoder+BooleanEncodingStrategy.swift */; };
+		96B8A41B2BEBB14C00C79968 /* RSNMultipartFormData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B8A41A2BEBB14C00C79968 /* RSNMultipartFormData.swift */; };
+		96B8A41D2BEBB15800C79968 /* RSNMultipartFormDataItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B8A41C2BEBB15800C79968 /* RSNMultipartFormDataItem.swift */; };
+		96B8A41F2BEBB1D500C79968 /* RSNMultipartDataError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B8A41E2BEBB1D500C79968 /* RSNMultipartDataError.swift */; };
+		96B8A4222BEBB22900C79968 /* Data+AppendString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B8A4212BEBB22900C79968 /* Data+AppendString.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +73,10 @@
 		96B8A4132BEBABC800C79968 /* NSNumber+IsBool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSNumber+IsBool.swift"; sourceTree = "<group>"; };
 		96B8A4152BEBAC2500C79968 /* RSNQueryParametersEncoder+ArrayEncodingStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RSNQueryParametersEncoder+ArrayEncodingStrategy.swift"; sourceTree = "<group>"; };
 		96B8A4172BEBAC7600C79968 /* RSNQueryParametersEncoder+BooleanEncodingStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RSNQueryParametersEncoder+BooleanEncodingStrategy.swift"; sourceTree = "<group>"; };
+		96B8A41A2BEBB14C00C79968 /* RSNMultipartFormData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSNMultipartFormData.swift; sourceTree = "<group>"; };
+		96B8A41C2BEBB15800C79968 /* RSNMultipartFormDataItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSNMultipartFormDataItem.swift; sourceTree = "<group>"; };
+		96B8A41E2BEBB1D500C79968 /* RSNMultipartDataError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSNMultipartDataError.swift; sourceTree = "<group>"; };
+		96B8A4212BEBB22900C79968 /* Data+AppendString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+AppendString.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +142,7 @@
 				96B2F3DA2BEBA07A00BCB0F3 /* Enums */,
 				96B8A4082BEBA80200C79968 /* Errors */,
 				96B2F3E32BEBA17500BCB0F3 /* Extensions */,
+				96B8A4192BEBB12700C79968 /* MultipartFormData */,
 				96B2F3D92BEBA06F00BCB0F3 /* Protocols */,
 			);
 			path = Sources;
@@ -177,6 +186,7 @@
 		96B2F3E32BEBA17500BCB0F3 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				96B8A4202BEBB22000C79968 /* Data */,
 				96B8A40F2BEBAA9000C79968 /* Encodable */,
 				96B8A4122BEBABB700C79968 /* NSNumber */,
 				96B8A4052BEBA7E000C79968 /* URL */,
@@ -228,6 +238,7 @@
 			isa = PBXGroup;
 			children = (
 				96B8A4092BEBA82500C79968 /* RSNURLError.swift */,
+				96B8A41E2BEBB1D500C79968 /* RSNMultipartDataError.swift */,
 			);
 			path = Errors;
 			sourceTree = "<group>";
@@ -264,6 +275,23 @@
 				96B8A4132BEBABC800C79968 /* NSNumber+IsBool.swift */,
 			);
 			path = NSNumber;
+			sourceTree = "<group>";
+		};
+		96B8A4192BEBB12700C79968 /* MultipartFormData */ = {
+			isa = PBXGroup;
+			children = (
+				96B8A41A2BEBB14C00C79968 /* RSNMultipartFormData.swift */,
+				96B8A41C2BEBB15800C79968 /* RSNMultipartFormDataItem.swift */,
+			);
+			path = MultipartFormData;
+			sourceTree = "<group>";
+		};
+		96B8A4202BEBB22000C79968 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				96B8A4212BEBB22900C79968 /* Data+AppendString.swift */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -377,22 +405,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96B8A41D2BEBB15800C79968 /* RSNMultipartFormDataItem.swift in Sources */,
 				96B8A3F82BEBA3B100C79968 /* RSNResponseInformationalStatus.swift in Sources */,
 				96B8A3FC2BEBA43200C79968 /* RSNResponseRedirectionStatus.swift in Sources */,
 				96B8A3FA2BEBA3E500C79968 /* RSNResponseSuccessfulStatus.swift in Sources */,
 				96B2F3DE2BEBA0A200BCB0F3 /* RSNRequestMethod.swift in Sources */,
 				96B8A4112BEBAAA500C79968 /* Encodable+ConvertToDictionary.swift in Sources */,
 				96B2F3EC2BEBA31B00BCB0F3 /* RSNResponseStatus.swift in Sources */,
+				96B8A41F2BEBB1D500C79968 /* RSNMultipartDataError.swift in Sources */,
 				96B2F3E62BEBA19900BCB0F3 /* URLRequest+InitFromRSNRequest.swift in Sources */,
 				96B8A40E2BEBAA6700C79968 /* RSNQueryParametersEncoder.swift in Sources */,
 				96B8A4002BEBA4AC00C79968 /* RSNResponseServerError.swift in Sources */,
 				96B8A4162BEBAC2500C79968 /* RSNQueryParametersEncoder+ArrayEncodingStrategy.swift in Sources */,
 				96B8A4072BEBA7F100C79968 /* URL+QueryParameters.swift in Sources */,
 				965455DE2BEB97BD00B871C3 /* NetOps.docc in Sources */,
+				96B8A41B2BEBB14C00C79968 /* RSNMultipartFormData.swift in Sources */,
 				96B2F3E02BEBA0D900BCB0F3 /* RSNRequestMethod+CustomStringConvertible.swift in Sources */,
 				96B2F3E92BEBA28200BCB0F3 /* RSNResponse.swift in Sources */,
 				96B8A4182BEBAC7600C79968 /* RSNQueryParametersEncoder+BooleanEncodingStrategy.swift in Sources */,
 				96B8A4142BEBABC800C79968 /* NSNumber+IsBool.swift in Sources */,
+				96B8A4222BEBB22900C79968 /* Data+AppendString.swift in Sources */,
 				96B2F3E22BEBA11A00BCB0F3 /* RSNRequest.swift in Sources */,
 				96B8A40A2BEBA82500C79968 /* RSNURLError.swift in Sources */,
 				96B8A4042BEBA5D700C79968 /* RSNResponseStatus+Equatable.swift in Sources */,
