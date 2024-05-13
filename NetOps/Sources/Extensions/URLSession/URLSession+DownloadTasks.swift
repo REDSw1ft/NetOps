@@ -4,7 +4,12 @@ public extension URLSession {
     
     func downloadTask(with request: URLRequest, completionHandler: @escaping(RSNResponse) -> Void) -> URLSessionDownloadTask {
         let task = self.downloadTask(with: request) { url, response, error in
-            completionHandler(RSNDownloadResponse(response: response, fileUrl: url, error: error))
+            do {
+                let response = try RSNDownloadResponse(response: response, fileUrl: url, error: error)
+                completionHandler(response)
+            } catch {
+                completionHandler(RSNDataResponse(error: error))
+            }
         }
         return task
     }

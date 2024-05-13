@@ -19,7 +19,7 @@ public extension URLSession {
     
     func download(with request: URLRequest) async throws -> RSNResponse {
         let (url, response) = try await self.download(for: request)
-        return RSNDownloadResponse(response: response, fileUrl: url)
+        return try RSNDownloadResponse(response: response, fileUrl: url)
     }
     
     func download(with request: RSNRequest) async throws -> RSNResponse {
